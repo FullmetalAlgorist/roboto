@@ -113,3 +113,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .v-icon{
+    background-color: red !important;
+  }
+</style>
