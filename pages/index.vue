@@ -3,16 +3,14 @@
     column
     justify-center
     align-center
-    
+    :style="{ backgroundImage: 'url(' + require('@/assets/pics/one.jpg') + ')' }"
+  class="layout-wrapper"
   >
- 
     <v-flex
       xs12
       sm8
       md6
-      
     >
-     <v-img :src="require('assets/pics/one.jpg')"></v-img>
     <v-form >
       
       <v-btn to="/inhance">ocean</v-btn>
@@ -56,8 +54,10 @@ export default {
 }
 </script>
 <style scoped>
-.layout{
-  
-
+.layout-wrapper{
+width: 100vw;
+height: 50vh;
+background-size:cover;
+background-position: 0 -125px;
 }
 </style>
