@@ -1,4 +1,5 @@
 <template>
+<div>
   <v-layout
     column
     justify-center
@@ -6,17 +7,7 @@
     :style="{ backgroundImage: 'url(' + require('@/assets/pics/one.jpg') + ')' }"
   class="layout-wrapper"
   >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
-    <v-form >
-      
-      <v-btn to="/inhance">ocean</v-btn>
-    
-    
-    </v-form>
+   
       <!-- <v-card>
         <v-card-title class="headline">Welcome to your very own iTunes search!</v-card-title>
         <v-card-text>
@@ -32,8 +23,28 @@
           >Continue</v-btn>
         </v-card-actions>
       </v-card> -->
-    </v-flex>
+    
   </v-layout>
+   <v-layout
+    column
+    justify-center
+    align-center
+    class="bottom-half">
+ <v-flex
+      xs12
+      sm8
+      md6
+    >
+    <v-form >
+      
+      <v-btn to="/inhance">ocean</v-btn>
+    
+    
+    </v-form>
+</v-flex>
+
+   </v-layout>
+   </div>
 </template>
 
 <script>
@@ -56,8 +67,14 @@ export default {
 <style scoped>
 .layout-wrapper{
 width: 100vw;
-height: 50vh;
+height: 70vh;
 background-size:cover;
 background-position: 0 -125px;
+}
+
+.bottom-half{
+  width: 100vw;
+height: 30vh;
+  /* align-content: center; */
 }
 </style>
