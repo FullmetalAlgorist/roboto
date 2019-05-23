@@ -40,7 +40,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/vuetify'
+    '@/plugins/vuetify',
+
   ],
 
   /*
@@ -53,6 +54,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendor: ['axios'],
     transpile: ['vuetify/lib'],
     plugins: [new VuetifyLoaderPlugin()],
     loaders: {
