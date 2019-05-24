@@ -8,7 +8,7 @@
   > 
   <!-- :style="{ backgroundImage: 'url(' + require('@/assets/pics/two.jpg') + ')' }"
   class="layout-wrapper" -->
-<v-form >
+<v-form @submit.prevent="submit">
  <v-text-field
             label="Enter Artist Name"
             outline
@@ -32,6 +32,11 @@ export default {
     return {
       searchMe: ''
     }
+},
+methods: {
+  submit(event){
+    this.$router.push('results/'+ this.searchMe);
+  }
 }
 }
 </script>
