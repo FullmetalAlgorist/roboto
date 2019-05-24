@@ -4,22 +4,15 @@
       fixed
       app
     >
-      <v-btn to="/">
+      <v-spacer />
+       <v-icon large primary class="search-icon">search</v-icon>
+       <div class="TITle">
+      <v-toolbar-title class="app-title">MusicSearch</v-toolbar-title>
+        </div>
+        <v-spacer />
+      <v-btn small dark fab class="refresh" to="/">
         <v-icon>refresh</v-icon>
       </v-btn> 
-      <v-spacer />
-       <v-icon>search</v-icon>
-      <v-toolbar-title class="app-title">searchMe</v-toolbar-title>
-   
-     
-    
-        <v-spacer />
-      <!-- <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>menu</v-icon>
-      </v-btn> -->
     </v-toolbar>
 </template>
 
@@ -47,6 +40,9 @@ export default {
       rightDrawer: false,
       title: 'iTunes Search'
     }
+  },
+  methods:{
+      
   }
 }
 </script>
@@ -55,5 +51,21 @@ export default {
 .app-title{
   font-family: 'Caveat', cursive;
   font-size: 200% !important;
+  /* text-decoration: underline; */
+  
+   
+ }
+.refresh{
+    border: 2px solid #11c3b2;
+}
+.TITle{
+    width: 60%;
+    border-bottom: 5px dotted #ccc;
+  border-bottom-color:#11c3b2;
+}
+.search-icon{
+    color: #11c3b2 !important;
+    margin-top: 5px;
+    padding-right: 5px;
 }
 </style>
