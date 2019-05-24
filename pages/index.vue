@@ -2,48 +2,20 @@
 <div>
   <v-layout
     column
-    justify-center
+   justify-center
     align-center
-    :style="{ backgroundImage: 'url(' + require('@/assets/pics/one.jpg') + ')' }"
-  class="layout-wrapper"
-  >
-   
-      <!-- <v-card>
-        <v-card-title class="headline">Welcome to your very own iTunes search!</v-card-title>
-        <v-card-text>
-      <p>oh hi</p>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            flat
-            nuxt
-            to="/inhance"
-          >Continue</v-btn>
-        </v-card-actions>
-      </v-card> -->
-    
-  </v-layout>
-   <v-layout
-    column
-    justify-center
-    align-center
-    class="bottom-half">
- <v-flex
-      xs12
-      sm8
-      md6
-    >
-    <v-form >
-      
-      <v-btn to="/inhance">ocean</v-btn>
-    
-    
-    </v-form>
-</v-flex>
-
-   </v-layout>
+    class="searchy"
+  > 
+  <!-- :style="{ backgroundImage: 'url(' + require('@/assets/pics/two.jpg') + ')' }"
+  class="layout-wrapper" -->
+<v-form >
+ <v-text-field
+            label="Enter Artist Name"
+            outline
+            v-model="searchMe"
+          ></v-text-field>
+          </v-form>
+   </v-layout> 
    </div>
 </template>
 
@@ -58,8 +30,7 @@ export default {
   },
   data() {
     return {
-      
-
+      searchMe: ''
     }
 }
 }
@@ -76,5 +47,8 @@ background-position: 0 -125px;
   width: 100vw;
 height: 30vh;
   /* align-content: center; */
+}
+.searchy{
+  height: 70vh;
 }
 </style>

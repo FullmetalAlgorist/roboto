@@ -10,7 +10,7 @@
       :fixed="fixed"
       app
     >
-      <span>&copy; 2019</span>
+      <span class="twothousand">&copy; 2019</span>
     </v-footer>
   </v-app>
 </template>
@@ -48,5 +48,7 @@ export default {
 </script>
 
 <style>
-
+.twothousand{
+  padding-left: 20px;
+}
 </style>

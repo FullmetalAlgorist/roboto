@@ -5,12 +5,15 @@
       app
     >
       <v-btn to="/">
-        <v-icon>house</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="searchMe" />
+        <v-icon>refresh</v-icon>
+      </v-btn> 
       <v-spacer />
-      <v-text-field v-model="searchMe"></v-text-field>
-      <v-spacer />
+       <v-icon>search</v-icon>
+      <v-toolbar-title class="app-title">searchMe</v-toolbar-title>
+   
+     
+    
+        <v-spacer />
       <!-- <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
@@ -24,7 +27,6 @@
 export default {
   data() {
     return {
-        searchMe: '',
       clipped: false,
       drawer: false,
       fixed: false,
@@ -50,5 +52,8 @@ export default {
 </script>
 
 <style>
-
+.app-title{
+  font-family: 'Caveat', cursive;
+  font-size: 200% !important;
+}
 </style>
