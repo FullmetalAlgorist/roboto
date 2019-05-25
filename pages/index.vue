@@ -14,6 +14,14 @@
             outline
             v-model="searchMe"
           ></v-text-field>
+          <v-text-field
+            solo-inverted
+            v-model="findMe"
+            flat
+            class="findMePlease"
+            readonly
+            @click="submit"
+          ></v-text-field>
           </v-form>
    </v-layout> 
    </div>
@@ -30,7 +38,8 @@ export default {
   },
   data() {
     return {
-      searchMe: ''
+      searchMe: '',
+      findMe: '            Find Album!'
     }
 },
 methods: {
@@ -56,4 +65,15 @@ height: 30vh;
 .searchy{
   height: 70vh;
 }
+.go{
+  width: 180px;
+}
+.findMePlease{
+  text-align: center;
+  align-content: center;
+  font-weight: bold;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 700 !important;
+}
+
 </style>

@@ -19,12 +19,15 @@ module.exports = {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons|Amatic+SC|Caveat&display=swap'
+          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons|Cabin:500,700|Amatic+SC|Caveat&display=swap'
       },
      
     ]
   },
-
+  server: {
+    port: 8080, // default: 3000
+    host: '0.0.0.0', // default: localhost
+  },
   /*
   ** Customize the progress-bar color
   */

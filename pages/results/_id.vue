@@ -13,7 +13,7 @@ export default {
     methods: {
     },
     created(){
-         console.log(this.$store.state.albums[1]);
+        
     }
 }
 </script>
