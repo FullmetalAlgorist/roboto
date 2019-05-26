@@ -1,14 +1,13 @@
 <template>
     <v-toolbar
-      :clipped-left="clipped"
-      fixed
       app
       class="tooly"
+      
     >
       <v-spacer />
-       <v-icon large primary class="search-icon">search</v-icon>
+       
        <div class="TITle">
-      <v-toolbar-title class="app-title">MusicSearch</v-toolbar-title>
+      <v-toolbar-title class="app-title">   <v-icon large primary class="search-icon">search</v-icon>   MusicSearch</v-toolbar-title>
         </div>
         <v-spacer />
       <v-btn small dark fab class="refresh" to="/">
@@ -54,7 +53,6 @@ export default {
   font-size: 200% !important;
   /* text-decoration: underline; */
   
-   
  }
 .refresh{
     border: 2px solid #11c3b2;
@@ -62,14 +60,18 @@ export default {
 }
 .TITle{
     width: 60%;
-    border-bottom: 5px dotted #ccc;
+    /* border-bottom: 5px dotted #ccc; */
   border-bottom-color:#11c3b2;
 }
 .search-icon{
     color: #11c3b2 !important;
     margin-top: 5px;
     padding-right: 5px;
+    
    
 }
-.tooly{}
+.tooly{
+text-align: center;
+
+}
 </style>
