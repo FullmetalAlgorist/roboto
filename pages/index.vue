@@ -18,18 +18,10 @@
           ></v-text-field>
           <v-btn @click="submit"
                   color="primary" 
-                  
+                  dark
                   class="findMePlease"
                   outline
                   >Find Albums!</v-btn>
-          <!-- <v-text-field
-            solo-inverted
-            v-model="findMe"
-            flat
-            class="findMePlease"
-            readonly
-            
-          ></v-text-field> -->
           </v-form>
    </v-layout> 
    </div>
@@ -81,8 +73,7 @@ background-position: 0 -125px;
   align-content: center;
   font-weight: bold;
   font-family: 'Cabin', sans-serif;
-  font-weight: 700 !important;
-  
+  font-weight: 700 !important;  
 }
 .newClass{
   font-family: 'Cabin', sans-serif;
