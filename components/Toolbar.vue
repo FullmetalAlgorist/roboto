@@ -3,6 +3,7 @@
       :clipped-left="clipped"
       fixed
       app
+      class="tooly"
     >
       <v-spacer />
        <v-icon large primary class="search-icon">search</v-icon>
@@ -57,6 +58,7 @@ export default {
  }
 .refresh{
     border: 2px solid #11c3b2;
+     margin: 8px !important;
 }
 .TITle{
     width: 60%;
@@ -67,5 +69,7 @@ export default {
     color: #11c3b2 !important;
     margin-top: 5px;
     padding-right: 5px;
+   
 }
+.tooly{}
 </style>

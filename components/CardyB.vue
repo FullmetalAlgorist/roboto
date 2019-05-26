@@ -1,51 +1,70 @@
 <template>
-    <div >
-        <v-flex xs12 mb-2>
-            <v-card color="primary" class="white--text">
-              <v-layout row>
-                <v-flex xs7>
-                  <v-card-title primary-title>
-                    <div>
-                      <div class="headline">{{ title }}</div>
-                      <div>{{ artistName }}</div>
-                      <div>({{ releaseDate }})</div>
-                    </div>
-                  </v-card-title>
-                </v-flex>
-                <v-flex xs5>
-                  <v-img
-                    :src="art"
-                    height="125px"
-                    contain
-                  >
-                  </v-img>
-                </v-flex>
-              </v-layout>
-              <v-divider light></v-divider>
-              <v-card-actions class="pa-3">
-                Rate this album
-                <v-spacer></v-spacer>
-                <v-icon>star_border</v-icon>
-                <v-icon>star_border</v-icon>
-                <v-icon>star_border</v-icon>
-                <v-icon>star_border</v-icon>
-                <v-icon>star_border</v-icon>
-              </v-card-actions>
-            </v-card>
-          </v-flex>
-    </div>
+  <v-card
+    color="primary" 
+    class="white--text cardy mx-auto"
+    dark
+ 
+    
+  >
+    <v-layout justify-space-between>
+      <v-flex xs8>
+        <v-card-title primary-title>
+          <div>
+            <div  class="headline">{{ title }}</div>
+            <div class="">{{ artistName }}</div>
+            <div class="">({{ releaseDate }})</div>
+          </div>
+        </v-card-title>
+      </v-flex>
+      <v-img
+        class="shrink ma-2"
+        contain
+        height="125px"
+        :src="art"
+        style="flex-basis: 125px"
+      ></v-img>
+    </v-layout>
+    <v-divider dark></v-divider>
+    <v-card-actions class="pa-2">
+      Rate this album
+      <v-spacer></v-spacer>
+      <span class="caption mr-2">
+        ({{ rating }})
+      </span>
+      <v-rating
+        v-model="rating"
+        background-color="white"
+        color="white"
+        dense
+        half-increments
+        hover
+      ></v-rating>
+    </v-card-actions>
+  </v-card>
 </template>
 <script>
 export default {
   data(){
     return {
-       
+       rating: 0
     }
   },
    props: {title : String,
             art: String,
             artistName: String,
             releaseDate: String
-    }
+    },
+    
 }
 </script>
+<style scoped>
+.stars{
+  color: black;
+}
+.cardy{
+  margin-bottom: 16px;
+  margin-right: 16px;
+  width: 91vw;
+  max-width: 550px;
+}
+</style>

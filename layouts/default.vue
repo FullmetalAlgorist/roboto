@@ -2,7 +2,7 @@
   <v-app dark>
     <toolbar/>
     <v-content>
-      <v-container>
+      <v-container pl-0>
         <nuxt />
       </v-container>
     </v-content>

@@ -47,7 +47,7 @@ export default {
   data() {
     return {
       searchMe: '',
-      findMe: '            Find Album!'
+      findMe: 'Find Album!'
     }
 },
 methods: {
@@ -67,7 +67,7 @@ background-position: 0 -125px;
 
 .bottom-half{
   width: 100vw;
-height: 30vh;
+  height: 30vh;
   /* align-content: center; */
 }
 .searchy{
