@@ -8,20 +8,28 @@
   > 
   <!-- :style="{ backgroundImage: 'url(' + require('@/assets/pics/two.jpg') + ')' }"
   class="layout-wrapper" -->
-<v-form @submit.prevent="submit">
+<v-form @submit.prevent="submit"
+          class="formMe">
  <v-text-field
             label="Enter Artist Name"
             outline
             v-model="searchMe"
+            class="newClass"
           ></v-text-field>
-          <v-text-field
+          <v-btn @click="submit"
+                  color="primary" 
+                  
+                  class="findMePlease"
+                  outline
+                  >Find Albums!</v-btn>
+          <!-- <v-text-field
             solo-inverted
             v-model="findMe"
             flat
             class="findMePlease"
             readonly
-            @click="submit"
-          ></v-text-field>
+            
+          ></v-text-field> -->
           </v-form>
    </v-layout> 
    </div>
@@ -74,6 +82,13 @@ height: 30vh;
   font-weight: bold;
   font-family: 'Cabin', sans-serif;
   font-weight: 700 !important;
+  
 }
-
+.newClass{
+  font-family: 'Cabin', sans-serif;
+}
+.formMe{
+  text-align: center;
+  align-content: center;
+}
 </style>

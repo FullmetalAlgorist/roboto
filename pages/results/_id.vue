@@ -6,7 +6,7 @@
 <script>
 import CardyB from '~/components/CardyB.vue'
 export default {
-    middleware: 'search',
+    // middleware: 'search',
     components: {
         'cardy-b': CardyB
     },
