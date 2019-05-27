@@ -10,8 +10,8 @@ Creating a file in this directory automatically activates the option in the fram
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/vuex-store).
 
 Things to do:
--custom 404 page
--validation/ error handling in general
+-make info page, that says it's from itunes
 -make sure axios request is happening on the server side
--research auto complete through api results and how hard that would be to implement
--star clickability
+--play around with async data in script vs the store reach out
+-maybe a model that tells you what happens when an album is clicked
+-finish  tutorial
