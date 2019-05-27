@@ -1,10 +1,8 @@
 <template>
   <v-card
-    color="primary" 
+    :color="chosenColor" 
     class="white--text cardy mx-auto"
     dark
- 
-    
   >
     <v-layout justify-space-between>
       <v-flex xs8>
@@ -52,8 +50,19 @@ export default {
    props: {title : String,
             art: String,
             artistName: String,
-            releaseDate: String
+            releaseDate: String,
+            cardNum: Number
     },
+    computed: {
+      chosenColor(){
+        if (this.cardNum % 2 == 0){
+          return 'primary';
+        }
+        else{
+          return 'accent';
+        }
+      }
+    }
     
 }
 </script>

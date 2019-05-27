@@ -2,7 +2,7 @@
     <v-toolbar
       app
       class="tooly"
-      
+      color="accent"
     >
       <v-spacer />
        
@@ -72,6 +72,5 @@ export default {
 }
 .tooly{
 text-align: center;
-
 }
 </style>

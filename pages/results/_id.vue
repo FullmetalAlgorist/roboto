@@ -1,9 +1,15 @@
 <template>
 <div class="albums">
 <div v-if="!alert" class="results">
-    <cardy-b v-for="album in this.$store.state.albums"  :title="album.collectionName" :art="album.artworkUrl100" :artistName="album.artistName":releaseDate="album.releaseDate.substring(0,4)"/>
+    <cardy-b v-for="(album, index) in this.$store.state.albums" 
+    :key="album.id" 
+    :title="album.collectionName" 
+    :art="album.artworkUrl100" 
+    :artistName="album.artistName" 
+    :releaseDate="album.releaseDate.substring(0,4)"
+    :cardNum="index"
+    />
     </div>
-   
      <v-alert
       v-model="alert"
       color="error"
@@ -26,7 +32,6 @@ export default {
     },
     computed: {
         alert(){
-          
             return !this.$store.state.albums.length>0;
         }
     },
