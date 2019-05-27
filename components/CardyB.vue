@@ -8,7 +8,7 @@
       <v-flex xs8>
         <v-card-title primary-title>
           <div>
-            <div  class="headline">{{ title }}</div>
+           <a :href="albumLink"> <div class="headline">{{ title }}</div></a>
             <div class="">{{ artistName }}</div>
             <div class="">({{ releaseDate }})</div>
           </div>
@@ -51,7 +51,8 @@ export default {
             art: String,
             artistName: String,
             releaseDate: String,
-            cardNum: Number
+            cardNum: Number,
+            albumLink: String
     },
     computed: {
       chosenColor(){
@@ -62,6 +63,9 @@ export default {
           return 'accent';
         }
       }
+    },
+    methods:{
+     
     }
     
 }

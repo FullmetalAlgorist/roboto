@@ -7,6 +7,7 @@
     :art="album.artworkUrl100" 
     :artistName="album.artistName" 
     :releaseDate="album.releaseDate.substring(0,4)"
+    :albumLink="album.collectionViewUrl"
     :cardNum="index"
     />
     </div>
@@ -42,7 +43,7 @@ export default {
 </script>
 <style scoped>
 .oopsError{
-    margin-left: 16px;
+    margin: 0 16px;
     font-size: 120%;
     text-align: center;
 }

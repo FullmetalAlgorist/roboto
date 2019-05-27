@@ -11,14 +11,13 @@
 <v-form @submit.prevent="submit"
           class="formMe">
  <v-text-field
-            label="Enter Artist Name"
+            label="Enter Artist Name..."
             outline
             v-model="searchMe"
             class="newClass"
           ></v-text-field>
           <v-btn @click="submit"
                   color="primary" 
-                  dark
                   class="findMePlease"
                   outline
                   >Find Albums!</v-btn>
@@ -39,7 +38,7 @@ export default {
   data() {
     return {
       searchMe: '',
-      findMe: 'Find Album!'
+      findMe: '            Find Album!'
     }
 },
 methods: {
@@ -59,7 +58,7 @@ background-position: 0 -125px;
 
 .bottom-half{
   width: 100vw;
-  height: 30vh;
+height: 30vh;
   /* align-content: center; */
 }
 .searchy{
@@ -73,7 +72,8 @@ background-position: 0 -125px;
   align-content: center;
   font-weight: bold;
   font-family: 'Cabin', sans-serif;
-  font-weight: 700 !important;  
+  font-weight: 700 !important;
+  
 }
 .newClass{
   font-family: 'Cabin', sans-serif;

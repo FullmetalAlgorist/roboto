@@ -8,6 +8,7 @@ export const state = () => ({
   
   export const mutations = {
     setAlbums (state, payload) {
+      console.log(payload);
       state.albums = payload;
     }
   }
