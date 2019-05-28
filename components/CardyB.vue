@@ -9,7 +9,7 @@
       <v-flex xs8>
         <v-card-title primary-title>
           <div>
-           <a  class="linkStyling" :href="albumLink"> <div class="headline">{{ title }}</div></a>
+           <a  class="linkStyling" :href="albumLink"> <div  class="headline">{{ title }}</div></a>
             <div class="">{{ artistName }}</div>
             <div class="">({{ releaseDate }})</div>
           </div>
