@@ -27,13 +27,7 @@ import CardyB from '~/components/CardyB.vue'
 import axios from 'axios';
 
 export default {
-    asyncData(context){
-    console.log('hi from async');
-    return axios.get(`https://itunes.apple.com/search?term=${context.params.id}&entity=album`).then((response) => {
-        context.store.commit('setAlbums', response.data.results);
-    })
-    },
-    //  middleware: 'search',
+    middleware: 'search',
     components: {
         'cardy-b': CardyB
     },
