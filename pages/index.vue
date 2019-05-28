@@ -5,9 +5,11 @@
    justify-center
     align-center
     class="searchy"
-  > 
-  <!-- :style="{ backgroundImage: 'url(' + require('@/assets/pics/two.jpg') + ')' }"
-  class="layout-wrapper" -->
+  >
+   <!-- <v-spacer/>
+   <v-btn fab @click="toInspire"><v-icon>house</v-icon></v-btn>
+   <v-btn fab @click="toOcean"><v-icon>M</v-icon></v-btn>
+  <v-spacer/> -->
 <v-form @submit.prevent="submit"
           class="formMe">
  <v-text-field
@@ -44,17 +46,17 @@ export default {
 methods: {
   submit(event){
     this.$router.push('results/'+ this.searchMe);
+  },
+  toInspire(){
+    this.$router.push('/inspire');
+  },
+  toOcean(){
+    this.$router.push('/ocean/inhance');
   }
 }
 }
 </script>
 <style scoped>
-.layout-wrapper{
-width: 100vw;
-height: 70vh;
-background-size:cover;
-background-position: 0 -125px;
-}
 
 .bottom-half{
   width: 100vw;
