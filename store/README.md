@@ -17,3 +17,4 @@ Things to do:
 --play around with async data in script vs the store reach out
 -maybe a model that tells you what happens when an album is clicked
 -maybe a database that stores star ratings
+
