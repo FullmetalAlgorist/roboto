@@ -4,7 +4,7 @@
     column
    justify-center
     align-center
-    class="searchy"
+    class="searchy"  
   >
    <!-- <v-spacer/>
    <v-btn fab @click="toInspire"><v-icon>house</v-icon></v-btn>
