@@ -1,12 +1,13 @@
 <template>
-<v-hover>
+
   <v-card
     :color="chosenColor" 
     class="white--text cardy mx-auto"
     dark
-    slot-scope="{ hover }"
+    
   >
-    <v-layout justify-space-between>
+  <v-hover>
+    <v-layout justify-space-between slot-scope="{ hover }">
       <v-expand-transition>
           <div
             v-if="hover"
@@ -34,6 +35,7 @@
        :href="albumLink"
       ></v-img>
     </v-layout>
+      </v-hover>
     <v-divider dark></v-divider>
     <v-card-actions class="pa-2">
       Rate this album
@@ -50,8 +52,9 @@
         hover
       ></v-rating>
     </v-card-actions>
+
   </v-card>
-  </v-hover>
+
 </template>
 <script>
 export default {
