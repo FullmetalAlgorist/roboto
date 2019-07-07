@@ -10,10 +10,10 @@
       <v-expand-transition>
           <div
             v-if="hover"
-            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            class="d-flex transition-fast-in-fast-out white darken-2 v-card--reveal display-3 white--text"
             style="height: 100%;"
           >
-            $14.99
+            <v-img :src="iTune.srrc"></v-img>
           </div>
         </v-expand-transition>
       <v-flex xs8>
@@ -57,7 +57,8 @@
 export default {
   data(){
     return {
-       rating: 0
+       rating: 0,
+       iTune: {srrc: require('@/assets/pics/iTunes.png')},
     }
   },
    props: {title : String,
