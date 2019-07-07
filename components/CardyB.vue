@@ -21,6 +21,7 @@
         height="125px"
         :src="art"
         style="flex-basis: 125px"
+       :href="albumLink"
       ></v-img>
     </v-layout>
     <v-divider dark></v-divider>
