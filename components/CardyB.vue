@@ -1,11 +1,21 @@
 <template>
+<v-hover>
   <v-card
     :color="chosenColor" 
     class="white--text cardy mx-auto"
     dark
-    
+    slot-scope="{ hover }"
   >
     <v-layout justify-space-between>
+      <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $14.99
+          </div>
+        </v-expand-transition>
       <v-flex xs8>
         <v-card-title primary-title>
           <div>
@@ -41,6 +51,7 @@
       ></v-rating>
     </v-card-actions>
   </v-card>
+  </v-hover>
 </template>
 <script>
 export default {
@@ -85,5 +96,13 @@ export default {
 .linkStyling{
   color: white;
   text-decoration: none;
+}
+.v-card--reveal {
+  align-items: center;
+  bottom: 0;
+  justify-content: center;
+  opacity: .5;
+  position: absolute;
+  width: 100%;
 }
 </style>
