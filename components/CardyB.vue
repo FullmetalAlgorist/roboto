@@ -6,25 +6,28 @@
     dark
     
   >
-  <v-hover>
-    <v-layout justify-space-between slot-scope="{ hover }">
+  
+    <v-layout justify-space-between >
       <v-expand-transition>
-          <div
+       
+        </v-expand-transition>
+      <v-flex xs8>
+        <v-hover>
+        <v-card-title primary-title slot-scope="{ hover }">
+             <div
             v-if="hover"
             class="d-flex transition-fast-in-fast-out white darken-2 v-card--reveal display-3 white--text"
             style="height: 100%;"
           >
             <v-img :src="iTune.srrc"></v-img>
           </div>
-        </v-expand-transition>
-      <v-flex xs8>
-        <v-card-title primary-title>
           <div>
            <a  class="linkStyling" :href="albumLink"> <div  class="headline">{{ title }}</div></a>
             <div class="">{{ artistName }}</div>
             <div class="">({{ releaseDate }})</div>
           </div>
         </v-card-title>
+           </v-hover>
       </v-flex>
       <v-img
         class="shrink ma-2"
@@ -35,7 +38,7 @@
        :href="albumLink"
       ></v-img>
     </v-layout>
-      </v-hover>
+   
     <v-divider dark></v-divider>
     <v-card-actions class="pa-2">
       Rate this album
