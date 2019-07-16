@@ -12,22 +12,25 @@
        
         </v-expand-transition>
       <v-flex xs8>
-        <v-hover>
-        <v-card-title primary-title slot-scope="{ hover }">
-             <div
+       
+        <v-card-title primary-title >
+           
+          <div>
+             <v-hover>
+           <a  class="linkStyling" :href="albumLink" slot-scope="{ hover }">
+              <div  class="headline">{{ title }}</div></a>
+               </v-hover>
+            <div class="">{{ artistName }}</div>
+            <div class="">({{ releaseDate }})</div>
+          </div>
+        </v-card-title>
+            <div
             v-if="hover"
             class="d-flex transition-fast-in-fast-out white darken-2 v-card--reveal display-3 white--text"
             style="height: 100%;"
           >
             <v-img :src="iTune.srrc"></v-img>
           </div>
-          <div>
-           <a  class="linkStyling" :href="albumLink"> <div  class="headline">{{ title }}</div></a>
-            <div class="">{{ artistName }}</div>
-            <div class="">({{ releaseDate }})</div>
-          </div>
-        </v-card-title>
-           </v-hover>
       </v-flex>
       <v-img
         class="shrink ma-2"

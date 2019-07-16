@@ -27,8 +27,8 @@
 <script>
 export default {
   components: {
-    Logo,
-    VuetifyLogo
+    // Logo,
+    // VuetifyLogo
   },
   data() {
     return {
