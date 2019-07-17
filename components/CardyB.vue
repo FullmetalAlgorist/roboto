@@ -1,36 +1,25 @@
 <template>
-
   <v-card
     :color="chosenColor" 
     class="white--text cardy mx-auto"
-    dark
-    
-  >
-  
+    dark>
     <v-layout justify-space-between >
       <v-expand-transition>
-       
         </v-expand-transition>
       <v-flex xs8>
-       
         <v-card-title primary-title >
-           
           <div>
-             <v-hover>
-           <a  class="linkStyling" :href="albumLink" slot-scope="{ hover }">
-              <div  class="headline">{{ title }}</div></a>
-               </v-hover>
+            <a class="linkStyling" :href="albumLink" >
+              <div 
+                @mouseover="hoverMe = true" 
+                @mouseleave="hoverMe=false"  
+                class="headline">{{ title }}
+              </div>
+            </a>
             <div class="">{{ artistName }}</div>
             <div class="">({{ releaseDate }})</div>
           </div>
         </v-card-title>
-            <div
-            v-if="hover"
-            class="d-flex transition-fast-in-fast-out white darken-2 v-card--reveal display-3 white--text"
-            style="height: 100%;"
-          >
-            <v-img :src="iTune.srrc"></v-img>
-          </div>
       </v-flex>
       <v-img
         class="shrink ma-2"
@@ -38,8 +27,15 @@
         height="125px"
         :src="art"
         style="flex-basis: 125px"
-       :href="albumLink"
-      ></v-img>
+        :href="albumLink"
+      >   <div
+            v-if="hoverMe"
+            class="d-flex transition-fast-in-fast-out white darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            <v-img :src="iTune.srrc"></v-img>
+          </div>
+      </v-img>
     </v-layout>
    
     <v-divider dark></v-divider>
@@ -58,9 +54,8 @@
         hover
       ></v-rating>
     </v-card-actions>
-
   </v-card>
-
+ <!-- </v-hover> -->
 </template>
 <script>
 export default {
@@ -68,6 +63,7 @@ export default {
     return {
        rating: 0,
        iTune: {srrc: require('@/assets/pics/iTunes.png')},
+        hoverMe: false
     }
   },
    props: {title : String,
@@ -87,10 +83,9 @@ export default {
         }
       }
     },
-    methods:{
-     
+    methods:{   
+   
     }
-    
 }
 </script>
 <style scoped>
