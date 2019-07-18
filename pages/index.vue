@@ -62,6 +62,7 @@ height: 30vh;
   font-weight: bold;
   font-family: 'Cabin', sans-serif;
   font-weight: 700 !important;
+  color: blue;
   
 }
 .newClass{

@@ -1,7 +1,7 @@
 <template>
-  <v-app dark>
+  <v-app dark class="secondary">
     <toolbar/>
-    <v-content>
+    <v-content class="content">
       <v-container px-0>
         <nuxt />
       </v-container>
@@ -35,8 +35,12 @@ export default {
 }
 </script>
 
-<style>
+<style >
 .twothousand{
   padding-left: 20px;
+}
+.app{
+  background-color:'#424444' !important;
+  /* '#424444' */
 }
 </style>
